@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import TodoForm from './TodoForm'
-import { RiCloseCircleLine } from 'react-icons/ri'
+import { RiCloseCircleLine, RiCheckboxBlankLine, RiCheckboxLine } from 'react-icons/ri'
 import { TiEdit } from 'react-icons/ti'
 
 function Todo({todos, completeTodo, removeTodo, updateTodo}){
@@ -27,7 +27,13 @@ function Todo({todos, completeTodo, removeTodo, updateTodo}){
             className={todo.isComplete ? "todo-row complete": "todo-row"} 
             key={index}
         >
-            <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+            {todo.isComplete ? (
+                <RiCheckboxLine class="checkbox-icon" key={todo.id} onClick={() => completeTodo(todo.id)}/>
+            ) : (
+                <RiCheckboxBlankLine class="checkbox-icon" key={todo.id} onClick={() => completeTodo(todo.id)}/>
+            )}
+            
+            <div className="todo-text">
                 {todo.text}
             </div>
             <div className="icons">
