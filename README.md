@@ -7,8 +7,9 @@ This was developed from a tutorial for study purposes: https://www.youtube.com/w
 <br />
 
 # Live Demo
-AVAILABLE SOON
+If you're like me and is always in a rush, just see the live demo, with no need to clone the project and set up the enviroment: http://andressabertolini.github.io/todo-list-app
 
+[![Thumbnail](thumbnail.png?raw=true "Preview")](http://andressabertolini.github.io/todo-list-app)
 
 # How to execute
 
